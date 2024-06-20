@@ -39,7 +39,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "puppeteer": "^22.1.0",
     "semantic-release": "^23.0.2",
-    "typescript": "~5.4.0"
+    "typescript": "~5.5.0"
   },
   "release": {
     "branches": [
