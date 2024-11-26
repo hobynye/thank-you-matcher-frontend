@@ -1,0 +1,26 @@
+{
+  "name": "thank-you-matcher",
+  "version": "0.0.0",
+  "scripts": {
+    "semantic-release": "npx semantic-release"
+  },
+  "private": true,
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "semantic-release": "^24.2.0",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.12"
+  },
+  "release": {
+    "branches": [ "main" ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      ["@semantic-release/git", {"assests": ["package.json", "package-lock.json"]}],
+      ["@semantic-release/github", {"assests":  ["dist/**"]}],
+      ["@qiwi/semantic-release-gh-pages-plugin", {"msg": "release <%= nextRelease.gitTag %>", "src":  "dist"}]
+    ]
+  }
+}
