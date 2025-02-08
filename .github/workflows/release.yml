@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm clean-install
-          npm build
+          npx build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
