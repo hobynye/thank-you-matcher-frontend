@@ -33,6 +33,19 @@
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true,
       "automergeType": "branch"
+    },
+    {
+      "extends": [
+        "monorepo:jasmine",
+        "monorepo:jest",
+        "monorepo:karma",
+        "monorepo:protractor",
+        "monorepo:puppeteer"
+      ],
+      "groupName": "everything testing",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true,
+      "automergeType": "branch"
     }
   ],
   "platformAutomerge": true,
