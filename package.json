@@ -36,8 +36,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.0",
     "semantic-release": "^24.2.0",
-    "@semantic-release/git": "^10.0.1",
-    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.12"
+    "@semantic-release/git": "^10.0.1"
   },
   "release": {
     "branches": [
@@ -50,25 +49,11 @@
       [
         "@semantic-release/git",
         {
+          "meessage": "chore(release): ${nextRelease.version} [skip ci]",
           "assests": [
             "package.json",
             "package-lock.json"
           ]
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assests": [
-            "dist/thank-you-matcher/browser/**"
-          ]
-        }
-      ],
-      [
-        "@qiwi/semantic-release-gh-pages-plugin",
-        {
-          "msg": "release <%= nextRelease.gitTag %>",
-          "src": "dist/thank-you-matcher/browser"
         }
       ]
     ]
