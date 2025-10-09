@@ -1,10 +1,10 @@
 import { TokenService } from './token.service';
 import { HttpEvent, HttpInterceptor, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {inject} from '@angular/core';
 
 export const tokenInterceptor: HttpInterceptorFn = (req, next) => {
-  const tokenService = new TokenService();
-  const token = tokenService.getToken();
+  const token = inject(TokenService).getToken();
   if (token) {
     const cloned = req.clone({
       setHeaders: {
