@@ -7,7 +7,6 @@ import { TokenService } from './token.service';
 describe('TokenInterceptor', () => {
   let httpTestingController: HttpTestingController;
   let httpClient: HttpClient;
-  let originalConstructor: any;
   let tokenServiceSpy: jasmine.SpyObj<TokenService>;
 
   beforeEach(() => {
@@ -30,7 +29,7 @@ describe('TokenInterceptor', () => {
     httpTestingController.verify();
   });
 
-  it('should insert the Authorization header', () => {
+  it('should insert the token when logged in', () => {
     const url = '/test';
     tokenServiceSpy.getToken.and.callFake(() => { return 'dummy-token'});
 
@@ -39,5 +38,15 @@ describe('TokenInterceptor', () => {
     const req = httpTestingController.expectOne(url);
     expect(req.request.headers.has('Authorization')).toBeTrue();
     expect(req.request.headers.get('Authorization')).toBe('Bearer dummy-token');
+  });
+
+  it('should not insert the token when not logged in', () => {
+    const url = '/test';
+    tokenServiceSpy.getToken.and.callFake(() => { return null });
+
+    httpClient.get(url).subscribe();
+
+    const req = httpTestingController.expectOne(url);
+    expect(req.request.headers.has('Authorization')).toBeFalsy();
   });
 });
