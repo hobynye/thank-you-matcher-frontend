@@ -15,7 +15,7 @@ export
 class LoginComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
 
-  constructor(private tokenService: TokenService) {
+  constructor(private readonly tokenService: TokenService) {
     this.isLoggedIn$ = this.tokenService.isLoggedIn$;
   }
 

@@ -5,8 +5,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TokenService {
-  private TOKEN_KEY = 'accessToken';
-  private isLoggedInSubject = new BehaviorSubject<boolean>(!!sessionStorage.getItem(this.TOKEN_KEY));
+  private readonly TOKEN_KEY = 'accessToken';
+  private readonly isLoggedInSubject = new BehaviorSubject<boolean>(!!sessionStorage.getItem(this.TOKEN_KEY));
   public isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable();
 
   constructor() {}
