@@ -37,8 +37,7 @@
     {
       "extends": [
         "monorepo:jasmine",
-        "monorepo:jest",
-        "monorepo:puppeteer"
+        "monorepo:jest"
       ],
       "groupName": "everything testing",
       "matchUpdateTypes": ["minor", "patch", "digest"],
