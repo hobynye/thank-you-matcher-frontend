@@ -28,7 +28,7 @@
     "@angular/build": "^22.0.0",
     "@angular/cli": "^22.0.0",
     "@angular/compiler-cli": "^22.0.0",
-    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/git": "^11.0.0",
     "@types/jasmine": "~6.0.0",
     "jasmine-core": "~6.3.0",
     "karma": "~6.4.4",
