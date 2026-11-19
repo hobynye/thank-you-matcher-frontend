@@ -11,6 +11,21 @@
         "monorepo:angularjs",
         "monorepo:angularmaterial"
       ],
+      "matchPackageNames": ["typescript"],
+      "groupName": "everything angular",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "extends": [
+        "monorepo:angular",
+        "monorepo:angular-cli",
+        "monorepo:angular-eslint",
+        "monorepo:angularfire",
+        "monorepo:angularjs",
+        "monorepo:angularmaterial"
+      ],
+      "matchPackageNames": ["typescript"],
       "groupName": "everything angular",
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true,
