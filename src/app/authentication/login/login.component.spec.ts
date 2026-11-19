@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { of } from 'rxjs';
 import { LoginComponent } from './login.component';
 import { TokenService } from '../token/token.service';
 
@@ -18,7 +19,7 @@ describe('LoginComponent', () => {
   };
 
   beforeEach(waitForAsync(() => {
-    const spy = jasmine.createSpyObj('TokenService', ['setToken']);
+    const spy = jasmine.createSpyObj('TokenService', ['setToken'], { isLoggedIn$: of(false) });
 
     TestBed.configureTestingModule({
       imports: [LoginComponent],
