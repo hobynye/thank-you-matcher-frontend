@@ -38,7 +38,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.3.0",
     "semantic-release": "^26.0.0",
-    "typescript": "~6.0.0"
+    "typescript": "~7.0.0"
   },
   "release": {
     "branches": [
