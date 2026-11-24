@@ -31,7 +31,7 @@
     "@semantic-release/git": "^11.0.0",
     "@types/jasmine": "~7.0.0",
     "istanbul-lib-instrument": "^6.0.0",
-    "jasmine-core": "~5.13.0",
+    "jasmine-core": "~7.0.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
